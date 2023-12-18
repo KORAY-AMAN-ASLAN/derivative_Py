@@ -9,10 +9,13 @@ class PasswordGenerator:
 
     def generate_password(self):
         characters = string.ascii_letters
+       # print(characters)
         if self.use_symbols:
             characters += string.punctuation
+           # print(characters)
         if self.use_numbers:
             characters += string.digits
+            #print(characters)
 
         password = ''.join(random.choice(characters) for _ in range(self.length))
         return password
